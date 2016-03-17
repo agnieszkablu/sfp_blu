@@ -1,0 +1,156 @@
+@media screen and (min-width: 414px) {
+	/*
+	============ Typography ===========
+	*/
+	html{
+		font-size: 62.5%;
+	}
+	/*
+	============ Header ===========
+	*/
+	.navbar-brand{
+		max-width: 55%;
+		img{
+			max-width: 55%;
+		}
+	}
+
+	/*
+	============ Section Contact ===========
+	*/
+	.contactSection{
+		img{
+			max-width: 30px;
+		}
+
+	}
+}
+@media screen and (min-width: 600px) {
+	/*
+	============ Typography ===========
+	*/
+	html{
+		font-size: 68.5%;
+	}
+}
+
+@media screen and (min-width: 768px) {
+		/*
+	============ Typography ===========
+	*/
+	html{
+		font-size: 70.5%;
+	}
+	/*
+	============ Header ===========
+	*/
+	.navbar-brand{
+		max-width: 85%;
+		img{
+			max-width: 60%;
+		}
+	}
+
+	/*
+	============ Section Contact ===========
+	*/
+	.contactSection{
+		img{
+			max-width: 40px;
+		}
+
+	}
+	/*
+	============ Section Footer ===========
+	*/
+	.site-footer{
+		text-align: center;
+	}
+	
+}
+@media screen and (min-width: 992px) {
+					//Desktop
+	/*
+	============ Typography ===========
+	*/
+	html{
+		font-size: 90.5%;
+	}
+	/*
+	============ Header ===========
+	*/
+	.navbar-brand{
+		max-width: 90%;
+		img{
+			max-width: 90%;
+		}
+	}
+	/*
+	============ Section Maps ===========
+	*/
+	.mapsContainer{
+
+		img{
+			padding-top: 25%;
+		}
+	}
+	/*
+	============ Section Contact ===========
+	*/
+	.contactSection{
+		img{
+			max-width: 35px;
+		}
+	}
+	/*
+	============ Google map ===========
+	*/
+	#map {   
+		height:315px;
+		width: 100%;
+	}
+	/*
+	============ Aside ===========
+	*/
+	aside{
+		ul{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			li{
+				&:before{
+					content:">";
+					padding-right: 8px;
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 1200px) {
+	/*
+	============ Typography ===========
+	*/
+	html{
+		font-size: 110.5%;
+	}
+	/*
+	============ Header ===========
+	*/
+	.navbar-brand{
+		max-width: 100%;
+		img{
+			max-width: 100%;
+		}
+	}
+	/*
+============ Section Contact ===========
+*/
+	.contactSection{
+		a{
+		}
+		img{
+			max-width: 100%;
+		}
+
+	}
+}

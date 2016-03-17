@@ -1,0 +1,261 @@
+.navbar-default{
+	border-color:transparent;
+	background-color: $color__navbar-bg;
+	box-shadow:1px 1px 2px 3px rgba(126,132,138,0.1), 0px 26px 42px 0px rgba(126,132,138,0.15);
+	border-bottom: solid 1px rgba(126,132,138,0.55);
+	.navbar-toggle{
+		border-color: $color__menu-button;
+		&:hover,
+		&:focus {
+			background-color: $color__navbar-bg;
+		}
+	}
+}
+.dropdown-menu{
+	background-color: $color__menu-mobile-bg;
+	border:none;
+	&:after{
+		content: '';
+		display: none;
+	}
+}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+    text-decoration: none;
+    color: rgba(255,255,255,0.5);
+	background-color: transparent;
+}
+.navbar-nav>li>.dropdown-menu {
+	border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+.main-navigation {
+	ul {
+		margin-top: auto;
+		li{
+			@include font-size(2);
+			&:hover{
+			}
+		}
+		a {
+		}
+		ul{
+			li{
+				text-align: center;
+				@include font-size(2);
+				a{
+					color:$color__text-plain;
+					padding-left: 20px;
+					padding-right: 20px; 
+				}
+			}
+		}
+	}
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+		color: $color__menu-mobile-active !important;
+	}
+	.dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus{
+		background-color: inherit;
+	}	
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
+	background-color: transparent;
+}
+.navbar-default .navbar-nav .open .dropdown-menu>.active>a, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus{
+	background-color: transparent;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus{
+	background-color: transparent;
+}
+
+//
+//================ custom RWD look of menu (bcs of Bootstrap) ========================
+//
+
+@media (max-width: 767px){
+	.navbar-default .navbar-nav>li>a{
+		text-align: center;
+	}
+	.navbar-nav .open .dropdown-menu {
+		background-color: $color__menu-mobile-bg;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu>li>a{
+		color:$color__text-plain;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover, .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus{
+		color:$color__text-plain;
+	}
+	.dropdown-menu > .current_page_item,
+	.dropdown-menu > .current-menu-item,
+	.dropdown-menu > .current_page_ancestor,
+	.dropdown-menu > .current-menu-ancestor {
+		line-height: 0.5;
+		& > a{
+			color: $color__text-plain !important;
+			display: inline-block;
+ 			position: relative;  
+			&:after,
+			&:before{
+				content: "";
+				position: absolute;
+				height: 5px;
+				border-top: 1px solid rgba(255,255,255,.4);
+				top: 15px;
+				width: 12px;
+			}
+			&:before{
+			 right: 70%;
+			 margin-right: 25%;
+			}
+			&:after{
+			 left: 70%;
+			 margin-left: 25%;
+			}
+		}
+	}
+}
+@media screen and (min-width: 768px) {
+	.navbar-default{
+		border: none;
+		box-shadow: none;
+	}
+	.dropdown-menu{
+		&:after{
+			content: '';
+			position: absolute;
+			display: block;
+			left: 38%;
+			top: -8px;
+			width: 0;
+			height: 0;
+			border-left: 25px solid transparent;
+			border-right: 25px solid transparent;
+			border-bottom: 20px solid #005624;
+		}
+	}
+	.main-navigation {
+		ul{
+			margin-top: -20px;
+			li{
+				a{
+					padding: 6px;
+				}
+			}
+		}
+	}
+	.navbar-right .dropdown-menu{
+		right: -90%;
+	}
+	.navbar-right #menu-item-333 .dropdown-menu{
+		right: -50%;
+	}
+	.dropdown-menu > .current_page_item,
+	.dropdown-menu > .current-menu-item,
+	.dropdown-menu > .current_page_ancestor,
+	.dropdown-menu > .current-menu-ancestor {
+		line-height: 0.5;
+		& > a{  
+			&:after,
+			&:before{
+				content: "";
+				position: absolute;
+				height: 5px;
+				border-top: 1px solid rgba(255,255,255,0.4);
+				top: 15px;
+				width: 12px;
+			}
+			&:before{
+			 right: 70%;
+			 margin-right: 20%;
+			}
+			&:after{
+			 left: 70%;
+			 margin-left: 20%;
+			}
+		}
+	}
+}
+@media screen and (min-width: 992px) {
+	.main-navigation {
+		ul{
+			li{
+				a{
+					padding: 10px;
+				}
+			}
+		}		
+	}
+	.navbar-right .dropdown-menu{
+		right: -60%;
+	}
+	.navbar-right #menu-item-333 .dropdown-menu{
+		right: -25%;
+	}
+	.dropdown-menu > .current_page_item,
+	.dropdown-menu > .current-menu-item,
+	.dropdown-menu > .current_page_ancestor,
+	.dropdown-menu > .current-menu-ancestor {
+		line-height: 0.5;
+		& > a{
+			&:after,
+			&:before{
+				content: "";
+				position: absolute;
+				height: 5px;
+				border-top: 1px solid rgba(255,255,255,.4);
+				top: 20px;
+				width: 12px;
+			}
+			&:before{
+			 right: 70%;
+			 margin-right: 20%;
+			}
+			&:after{
+			 left: 70%;
+			 margin-left: 20%;
+			}
+		}
+	}
+}
+@media screen and (min-width: 1200px) {
+.main-navigation {
+		ul{
+			li{
+				a{
+				}
+			}
+		}		
+	}
+	.navbar-right .dropdown-menu{
+		right: -25%;
+	}
+	.navbar-right #menu-item-333 .dropdown-menu{
+		right: -5%;
+	}
+	.dropdown-menu > .current_page_item,
+	.dropdown-menu > .current-menu-item,
+	.dropdown-menu > .current_page_ancestor,
+	.dropdown-menu > .current-menu-ancestor {
+		& > a{
+			&:after,
+			&:before{
+				content: "";
+				position: absolute;
+				width: 12px;
+				height: 5px;
+				border-top: 1px solid rgba(255,255,255,.4);
+				top: 25px;
+			}
+			&:before{
+			 right: 70%;
+			 margin-right: 20%;
+			}
+			&:after{
+			 left: 70%;
+			 margin-left: 20%;
+			}
+		}
+	}
+}
